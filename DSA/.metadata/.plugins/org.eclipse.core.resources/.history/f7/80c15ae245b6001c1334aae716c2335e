@@ -1,0 +1,17 @@
+
+public class Node {
+	private Student Data;
+	private Node next;
+	
+	public Node()
+	{
+		this.Data=null;
+		this.head=null;
+	}
+
+	public Node(Student data)
+	{
+		this.Data=data;
+		this.head=null;
+	}
+}

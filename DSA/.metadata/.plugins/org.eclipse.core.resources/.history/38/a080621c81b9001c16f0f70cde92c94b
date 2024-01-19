@@ -1,0 +1,130 @@
+
+public class CircularLL {
+	Node head;
+	
+	public CircularLL() {
+	  this.head=null;
+	}
+  
+	public void InsertFirst(int data) {
+		Node tmp = new Node(data);
+		if (head == null) {
+			head = tmp;
+			head.next = head;
+
+		} 
+		else 
+		{
+			Node it=head;
+		
+			while(it.next != head)
+			{
+				it=it.next;
+			}
+			it.next=tmp;
+			tmp.next=head;
+			head=tmp;
+		}
+		
+		
+
+			
+
+	}
+	
+	public void Append(int data) {
+		Node tmp = new Node(data);
+		if (head == null) {
+			head = tmp;
+			head.next = head;
+
+		} else {
+			Node it = head;
+			while (it.next != head) {
+				it = it.next;
+			}
+			it.next = tmp;
+			tmp.next = head;
+		}
+	}
+	public int LLength()
+	{
+		int noofNodes=0;
+		Node it=head;
+		while(it != head)
+		{
+			noofNodes++;
+			it=it.next;
+		
+		}
+		return noofNodes;
+	}
+	
+	public void InsertByPos(int data,int pos)
+	{
+		Node tmp = new Node(data);
+		int count=LLength();
+		if(pos==1)
+		{
+			InsertFirst(data);
+		}
+		else if(pos == count+1)
+		{
+			Append(data);
+		}
+		else if(pos != 1&& pos <count+1)
+		{
+			Node it=head;
+			for(int i=1;i<pos-1;i++)
+			{
+				it=it.next;
+			}
+			tmp.next=it.next;
+			it.next=tmp;
+			
+		}
+	}
+	public void DeleteFirst()
+	{
+		if(head==null)
+		{
+			System.out.println("The List Is Empty");
+		}
+		else if(head.next==head)
+		{
+			head.next=null;
+			head=null;
+		}
+		else
+		{
+			Node it=head.next;
+			Node t=head.next;
+			while(it.next==head)
+			{
+				it=it.next;
+			}
+			it.next=t;
+			head.next=null;
+			
+		}
+	}
+	public String toString() {
+		String str = "";
+		if (head == null) {
+			str = str + "LL IS Empty ";
+		} else {
+			Node it = head;
+			str=str+head + ",";
+			while (it.next!= head)  //with last node
+			{
+
+				str += it + ",";
+				it = it.next;
+			}
+
+			
+		}
+		return str;
+	}
+	
+}

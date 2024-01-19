@@ -1,0 +1,14 @@
+
+public class Main {
+	
+	public static void main(String []args) {
+		
+		CircularLL L1=new CircularLL();
+		L1.Append(10);
+		L1.InsertFirst(23);
+		L1.InsertFirst(43);
+		System.out.println(L1);
+		
+	}
+
+}

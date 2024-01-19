@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Hashing.java&apos; to &apos;Close Addressing Hashing/src/(default package)&apos;&#x0D;&#x0A;- Original project: &apos;Hashing&apos;&#x0D;&#x0A;- Destination element: &apos;Close Addressing Hashing/src/(default package)&apos;&#x0D;&#x0A;- Original element: &apos;Hashing.java&apos;" description="Copy compilation unit" destination="=Close Addressing Hashing/src&lt;" element1="/src&lt;{Hashing.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1649834833469" units="1" version="1.0"/>
+</session>

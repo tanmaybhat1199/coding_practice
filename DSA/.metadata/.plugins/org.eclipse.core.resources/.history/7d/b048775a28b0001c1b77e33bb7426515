@@ -1,0 +1,38 @@
+
+public class Stack {
+	static int TopIndex=-1;
+	static int []arr;
+	public static void main(String[] args) {
+		arr = new int[5];
+		
+		
+	}
+	
+	static void push(int n) {
+		if(TopIndex<arr.length-1)
+		{
+			TopIndex=TopIndex+1;
+			arr[TopIndex]=n;
+		}
+		else
+		{
+			System.out.println("OverFlow");
+
+		}
+	}
+	
+	static int pop() {
+		if(TopIndex<0)
+		{
+			int a= arr[TopIndex--];
+			return a;
+			
+		}
+		else {
+			System.out.println("Underflow");
+			return 0;
+		}
+	}
+
+}
+

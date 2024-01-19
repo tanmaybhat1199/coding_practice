@@ -1,0 +1,18 @@
+
+public class StackMain {
+
+	public static void main(String[] args) {
+	
+		Stack st=new Stack();
+		Student s1 = new Student("Ram",18,'M');
+		Student s2 = new Student("Sham",19,'M');
+		
+		st.push(s1);
+		st.push(s2);
+		System.out.println(st);
+		
+		
+
+	}
+
+}

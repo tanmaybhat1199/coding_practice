@@ -1,0 +1,23 @@
+
+public class LinkedList {
+	private Node head;
+	
+	public LinkedList()
+	{
+		this.head=null;
+	}
+	public void insertFirst(Student Data)
+	{
+		Node tmp=new Node(Data);
+		if(head==null)
+		{
+			head=tmp;
+		}
+		else
+		{
+		  tmp.setNext(head);
+		  head=tmp;
+		}
+	}
+
+}

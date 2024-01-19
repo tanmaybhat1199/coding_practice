@@ -1,0 +1,48 @@
+public class LinkedList{
+
+      private Node head;
+	  
+	  public void isPalindrome()
+	  {
+	    if(head==null || head.next==null)
+		return true;
+		
+		else
+		{
+		Node slow,fast,prevslow;
+		slow=fast=prevslow=head;
+		  while(fast.next!=null && fast.next.next!=null)
+		  {
+		    prevslow=slow;
+			slow=slow.next;
+			fast=fast.next.next;
+		  
+		  }
+		  Node secStart=slow.next;
+		if(fast.next==null)
+		{
+		  secStrat=reverse(secStart);
+		  
+		}
+		
+		
+		}
+	  
+	  
+	  }
+	  
+	  public Node reverse(Node head)
+      {
+	    if(head==null || head.next==null)
+		return head;
+		
+		Node newNode=reverse(head.next);
+		head.next.next=head;
+		head.next=null;
+		return newNode;
+	 
+	  
+	  
+	  }
+
+}

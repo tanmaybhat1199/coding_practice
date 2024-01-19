@@ -1,0 +1,15 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		LinkedList LL = new LinkedList();
+		
+		LL.insertFirst(new Student("Ram",18,'M'));
+		LL.insertFirst(new Student("Sham",19,'M'));
+		LL.append(new Student("Shalini",21,'F'));
+		System.out.println(LL);
+
+	}
+
+}

@@ -1,0 +1,179 @@
+
+public class LinkedList {
+	private Node head;
+	
+	public LinkedList()
+	{
+		this.head=null;
+	}
+	public void insertFirst(Student Data)
+	{
+		Node tmp=new Node(Data);
+		if(head==null)
+		{
+			head=tmp;
+		}
+		else
+		{
+		  tmp.setNext(head);
+		  head=tmp;
+		}
+	}
+	
+	public void append(Student Data)
+	{
+		Node tmp=new Node(Data);
+		if(head==null)
+		{
+			head=tmp;
+		}
+		if(head.getNext()==null)
+		{
+			 tmp.setNext(head);
+			  head=tmp;
+		}
+		else
+		{
+			Node it =head;
+			while(it.getNext()!= null)
+			{
+				it=it.getNext();
+			}
+			it.setNext(tmp);
+			tmp.setNext(null);
+		}
+				
+		
+	}
+	
+	public int getcount()
+	{
+		int NodeCnt=0;
+		Node it=head;
+		while(it.getNext()==null)
+		{
+			NodeCnt++;
+			it=it.getNext();
+		}
+		return NodeCnt;
+	}
+	
+	public void InserByPos(Student Data,int pos)
+	{
+		Node tmp=new Node(Data);
+		int NoOfNode=getcount();
+		if(pos==1)
+		{
+			insertFirst(Data);
+		}
+		else if(pos==NoOfNode)
+		{
+			append(Data);
+			
+		}
+		else if(pos!=1 &&  pos<NoOfNode)
+		{
+			Node it=head;
+			for(int i=1;i<pos-1;i++)
+			{
+				it=it.getNext();
+				
+			}
+			tmp.setNext(it.getNext());
+			it.setNext(tmp);
+			
+			
+		}
+		else
+			System.out.println("Invalid Choice");
+		
+	}
+	
+	public void DeleteFirst() {
+		if(head==null)
+		{
+			System.out.println("LL Is Empty");
+			
+		}
+		else if(head.getNext()==null)
+		{
+			head=null;
+		}
+		else
+		{
+			Node it=head;
+			head=it.getNext();
+			it.setNext(null);
+		}
+		
+	}
+
+	public void DeleteLast() {
+		if(head==null)
+		{
+			System.out.println("LL Is Empty");
+			
+		}
+		else if(head.getNext()==null)
+		{
+			head=null;
+		}
+		else
+		{
+			Node it=head;
+			while(it.getNext().getNext()==null)
+			{
+				it=it.getNext();
+			}
+			it.setNext(null);
+	
+		}
+		
+	}
+	public void DeleteByPos(int pos)
+	{
+		int NoOFNode=getcount();
+		Node it=head;
+    	if(pos==1)
+		{
+			DeleteFirst();
+		}
+		else if(pos==NoOFNode)
+		{
+			DeleteLast();
+		}
+		else if(pos!=1 && pos<NoOFNode)
+		{
+			for(int i=1;i<pos-1;i++)
+			{
+				it=it.getNext();
+				
+			}
+			Node t=it.getNext();
+			it.setNext(t.getNext());
+			t.setNext(null);
+		}
+		
+	}
+	
+	public String toString() {
+		String str = "";
+		if (head == null) {
+			str = str + "LL IS Empty ";
+		} else {
+			Node it = head;
+			//while (it.next != null) this is without last node
+			while (it != null)  //with last node
+			{
+
+				str += it.getData() + ",";
+				it = it.getNext();
+			}
+
+			
+		}
+		return str;
+	}
+		
+
+}

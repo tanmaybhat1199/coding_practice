@@ -1,0 +1,23 @@
+
+public class CircularLL {
+	Node head;
+	
+	public CircularLL() {
+	  this.head=null;
+	}
+  
+	public void InsertFirst(int data)
+	{
+		Node tmp=new Node(data);
+		if(head==null)
+		{
+			System.out.println("Linked List Is Empty");
+			
+		}
+		else
+		{
+			tmp.next(head);
+			
+		}
+	}
+}

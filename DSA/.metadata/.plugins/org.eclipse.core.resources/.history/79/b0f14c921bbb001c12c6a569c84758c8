@@ -1,0 +1,15 @@
+
+public class Main {
+	public static void main(String []args)
+	{
+    Hashing hash = new Hashing(7);
+		
+		hash.insert("Tanmay");
+		hash.insert("Tanmay");
+		hash.insert("Tanmay");
+		
+		hash.remove("Tanmay");
+		hash.remove("Tanmay");
+	}
+
+}

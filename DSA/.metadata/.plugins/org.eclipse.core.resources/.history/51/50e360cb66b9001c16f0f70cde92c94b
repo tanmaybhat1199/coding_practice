@@ -1,0 +1,48 @@
+
+public class CircularLL {
+	Node head;
+	
+	public CircularLL() {
+	  this.head=null;
+	}
+  
+	public void InsertFirst(int data) {
+		Node tmp = new Node(data);
+		if (head == null) {
+			head = tmp;
+			head.next = head;
+
+		} else if (head.next == null) {
+
+			tmp.next = head;
+			head.next = tmp;
+			head = tmp;
+
+		}
+		else {
+		tmp.next = head;
+		head = tmp;
+		}
+
+	}
+	
+	public void Append(int data)
+	{
+		Node tmp = new Node(data);
+		if (head == null) {
+			head = tmp;
+			head.next = head;
+		
+	}
+		else 
+		{
+			Node it=head;
+			while(it.next != null)
+			{
+				it=it.next;
+			}
+			it.next=tmp;
+			tmp.next=head;
+		}
+}
+}

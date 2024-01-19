@@ -1,0 +1,13 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		int []arr= {10,234,67,89,63,7,42,67};
+		System.out.print("Before Sorting");
+		MergeSort.Disp(arr);
+		MergeSort.MergeSort(arr, 0, arr.length);
+		MergeSort.Disp(arr);
+
+	}
+
+}
